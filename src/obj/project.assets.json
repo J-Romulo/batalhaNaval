@@ -8,19 +8,24 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\JRomulo\\.nuget\\packages\\": {}
+    "C:\\Users\\yrese\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JRomulo\\source\\repos\\J-Romulo\\batalhaNaval\\src\\src.vbproj",
+      "projectUniqueName": "C:\\Users\\yrese\\Documents\\Dev\\Projeto PLP\\batalhaNaval\\src\\src.vbproj",
       "projectName": "src",
-      "projectPath": "C:\\Users\\JRomulo\\source\\repos\\J-Romulo\\batalhaNaval\\src\\src.vbproj",
-      "packagesPath": "C:\\Users\\JRomulo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JRomulo\\source\\repos\\J-Romulo\\batalhaNaval\\src\\obj\\",
+      "projectPath": "C:\\Users\\yrese\\Documents\\Dev\\Projeto PLP\\batalhaNaval\\src\\src.vbproj",
+      "packagesPath": "C:\\Users\\yrese\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\yrese\\Documents\\Dev\\Projeto PLP\\batalhaNaval\\src\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\JRomulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\yrese\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

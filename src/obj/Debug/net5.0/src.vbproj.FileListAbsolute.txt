@@ -1,0 +1,16 @@
+C:\Users\yrese\Documents\Dev\Projeto PLP\batalhaNaval\src\obj\Debug\net5.0\src.vbprojAssemblyReference.cache
+C:\Users\yrese\Documents\Dev\Projeto PLP\batalhaNaval\src\obj\Debug\net5.0\src.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yrese\Documents\Dev\Projeto PLP\batalhaNaval\src\obj\Debug\net5.0\src.AssemblyInfoInputs.cache
+C:\Users\yrese\Documents\Dev\Projeto PLP\batalhaNaval\src\obj\Debug\net5.0\src.AssemblyInfo.vb
+C:\Users\yrese\Documents\Dev\Projeto PLP\batalhaNaval\src\obj\Debug\net5.0\src.vbproj.CoreCompileInputs.cache
+C:\Users\yrese\Documents\Dev\Projeto PLP\batalhaNaval\src\bin\Debug\net5.0\src.exe
+C:\Users\yrese\Documents\Dev\Projeto PLP\batalhaNaval\src\bin\Debug\net5.0\src.deps.json
+C:\Users\yrese\Documents\Dev\Projeto PLP\batalhaNaval\src\bin\Debug\net5.0\src.runtimeconfig.json
+C:\Users\yrese\Documents\Dev\Projeto PLP\batalhaNaval\src\bin\Debug\net5.0\src.runtimeconfig.dev.json
+C:\Users\yrese\Documents\Dev\Projeto PLP\batalhaNaval\src\bin\Debug\net5.0\src.dll
+C:\Users\yrese\Documents\Dev\Projeto PLP\batalhaNaval\src\bin\Debug\net5.0\ref\src.dll
+C:\Users\yrese\Documents\Dev\Projeto PLP\batalhaNaval\src\bin\Debug\net5.0\src.pdb
+C:\Users\yrese\Documents\Dev\Projeto PLP\batalhaNaval\src\obj\Debug\net5.0\src.dll
+C:\Users\yrese\Documents\Dev\Projeto PLP\batalhaNaval\src\obj\Debug\net5.0\ref\src.dll
+C:\Users\yrese\Documents\Dev\Projeto PLP\batalhaNaval\src\obj\Debug\net5.0\src.pdb
+C:\Users\yrese\Documents\Dev\Projeto PLP\batalhaNaval\src\obj\Debug\net5.0\src.genruntimeconfig.cache
