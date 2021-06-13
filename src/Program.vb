@@ -2,7 +2,6 @@ Imports System
 
 Module Program
     Sub Main(args As String())
-        Dim j As Jogador = New Jogador("Jogador 1")
-        Console.WriteLine(j.getNome)
+        GameController.run()
     End Sub
 End Module
