@@ -27,4 +27,25 @@ Public Class Navio
         posicoes(ordemPosicao, 1) = valorX
     End Function
 
+    Public Function getPosicao(ordemPosicao As Integer)
+        Dim coordenadasPosicao(2) As Integer
+        coordenadasPosicao(0) = posicoes(ordemPosicao, 0)
+        coordenadasPosicao(1) = posicoes(ordemPosicao, 1)
+
+        Return coordenadasPosicao
+    End Function
+
+    Public Function getQntdCasas()
+        If Me.tipo = tiposNavio.Submarino Then
+            Return 1
+        ElseIf Me.tipo = tiposNavio.Hiate Then
+            Return 2
+        ElseIf Me.tipo = tiposNavio.Barco Then
+            Return 3
+        ElseIf Me.tipo = tiposNavio.Navio Then
+            Return 4
+        ElseIf Me.tipo = tiposNavio.Cargueiro Then
+            Return 5
+        End If
+    End Function
 End Class
