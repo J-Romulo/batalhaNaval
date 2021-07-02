@@ -13,9 +13,9 @@ Public Class Mapa
     End Sub
 
     ''' acessa posicao
-    Default Public Property Item(posicaoX As Integer, posicaoY As Integer) As Integer
+    Default Public Property Item(posicaoY As Integer, posicaoX As Integer) As Integer
         Get
-            Return TabuleiroMapa(posicaoX, posicaoY)
+            Return TabuleiroMapa(posicaoY, posicaoX)
         End Get
 
         Set(valor As Integer)
@@ -46,7 +46,10 @@ Public Class Mapa
         Return False
     End Function
 
+    Public Function getNavio(posicao As Integer)
+        Return navios(posicao)
+    End Function
     Public Function getNaviosLength()
-        Return navios.Length
+        Return navios.Length - 1
     End Function
 End Class
