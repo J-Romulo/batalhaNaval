@@ -22,6 +22,7 @@
 
     Public Function fazerJogada(mapa As Mapa, posicaoY As Integer, posicaoX As Integer)
         If mapa.Item(posicaoY, posicaoX) <> 0 And mapa.Item(posicaoY, posicaoX) <> 6 Then
+            '''7 no mapa = posicao navio ja jogada
             mapa.Item(posicaoY, posicaoX) = 6
 
             If destruirNavio(mapa, posicaoY, posicaoX) = True Then
@@ -33,11 +34,12 @@
             End If
 
         ElseIf mapa.Item(posicaoY, posicaoX) = 0 Then
-            mapa.Item(posicaoY, posicaoX) = 6
+            '''7 no mapa = posicao agua ja jogada
+            mapa.Item(posicaoY, posicaoX) = 7
 
             '''0 = agua
             Return 0
-        ElseIf mapa.Item(posicaoY, posicaoX) = 6 Then
+        ElseIf mapa.Item(posicaoY, posicaoX) = 6 Or mapa.Item(posicaoY, posicaoX) = 7 Then
 
             '''-1 = refazer jogada
             Return -1

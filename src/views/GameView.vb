@@ -3,14 +3,18 @@ Imports GameView
 
 Public Module GameView
     Public Function menuInicial()
-        Console.WriteLine("Batalha Naval")
+        Console.ForegroundColor = ConsoleColor.Blue
+        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~")
+        Console.WriteLine("~~~~Batalha Naval~~~~~")
+        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~")
         Console.WriteLine("1 - Jogar")
         Console.WriteLine("2 - Sair")
+        Console.ResetColor()
         Return Console.ReadLine()
     End Function
 
     Public Function infoJogador()
-        Console.Write("Informe seu nome:")
+        Console.Write("Nome do jogador:")
         Dim playerNome = Console.ReadLine()
 
         Return New Jogador(playerNome)
@@ -30,10 +34,20 @@ Public Module GameView
         Dim altura = tabuleiro.getAltura
         Dim largura = tabuleiro.getLargura
 
+        Console.WriteLine()
+        Console.WriteLine("Seu tabuleiro")
         For i = 0 To altura
             Console.Write("{0}- ", i)
             For j = 0 To largura
+                If tabuleiroParaImprimir(i, j) = 0 Then
+                    Console.BackgroundColor = ConsoleColor.Blue
+                    Console.ForegroundColor = ConsoleColor.Black
+                Else
+                    Console.BackgroundColor = ConsoleColor.Red
+                    Console.ForegroundColor = ConsoleColor.Black
+                End If
                 Console.Write(tabuleiroParaImprimir(i, j))
+                Console.ResetColor()
             Next
             Console.WriteLine()
         Next
@@ -43,13 +57,26 @@ Public Module GameView
         Dim altura = tabuleiro.getAltura
         Dim largura = tabuleiro.getLargura
 
+        Console.WriteLine()
+        Console.WriteLine("Tabuleiro inimigo")
         For i = 0 To altura
             Console.Write("{0}- ", i)
             For j = 0 To largura
-                If (tabuleiroParaImprimir(i, j) <> 6) Then
-                    Console.Write(0)
-                Else
+                If (tabuleiroParaImprimir(i, j) = 6) Then
+                    Console.BackgroundColor = ConsoleColor.DarkBlue
+                    Console.ForegroundColor = ConsoleColor.DarkRed
                     Console.Write("X")
+                    Console.ResetColor()
+                ElseIf (tabuleiroParaImprimir(i, j) = 7) Then
+                    Console.BackgroundColor = ConsoleColor.DarkBlue
+                    Console.ForegroundColor = ConsoleColor.DarkRed
+                    Console.Write("~")
+                    Console.ResetColor()
+                Else
+                    Console.BackgroundColor = ConsoleColor.Blue
+                    Console.ForegroundColor = ConsoleColor.Black
+                    Console.Write("~")
+                    Console.ResetColor()
                 End If
             Next
             Console.WriteLine()
@@ -57,11 +84,13 @@ Public Module GameView
     End Function
 
     Public Function escolhaNavios()
+        Console.WriteLine()
         Console.WriteLine("1 - Submarino(1 casa)")
         Console.WriteLine("2 - Hiate(2 casas)")
         Console.WriteLine("3 - Barco(3 casas)")
         Console.WriteLine("4 - Navio(4 casas)")
-        Console.Write("5 - Cargueiro(5 casas)")
+        Console.WriteLine("5 - Cargueiro(5 casas)")
+        Console.Write(">>")
         Return Console.ReadLine()
     End Function
 
