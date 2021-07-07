@@ -16,7 +16,7 @@
         JogadorController.setarNavios(jogador)                      ''posiciona os navios no tabuleiro
 
         Dim bot As Jogador = JogadorController.criarBot(jogador.getMapa())  ''cria um bot com um tabuleiro igual ao do jogador
-        JogadorController.setarNaviosBot(bot, qntdNavios)                   ''posiciona os navios do bot
+        JogadorController.setarNavios(bot)                          ''posiciona os navios do bot
 
 
         Dim resultadoRodada

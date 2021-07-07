@@ -3,12 +3,29 @@
     Public Function setarNavios(jogador As Jogador)
         For j = 0 To jogador.getMapa().getNaviosLength()            ''para cada navio do jogador
             Dim linha, coluna, orientacao As Integer
-            Dim navioEscolha = GameView.escolhaNavios() - 1         ''retorna a opção de navio escolhida pelo usuário
-            Dim embarcacao = New Navio(navioEscolha)                ''cria um navio escolhido pelo usuário
+            Dim navioEscolha As Integer
 
+            If jogador.getNome() = "Bot" Then
+                Static Gerador As System.Random = New System.Random()
+                navioEscolha = Gerador.Next(0, 5)                       ''escolhe um barco aleatorio
+                linha = Gerador.Next(jogador.getMapa().getLargura)      ''escolhe uma linha aleatoria
+                coluna = Gerador.Next(jogador.getMapa().getAltura)      ''escolhe uma coluna aleatoria
+                orientacao = Gerador.Next(1, 3)                         ''escolhe uma orientação aleatoria
+            Else
+                navioEscolha = GameView.escolhaNavios() - 1             ''retorna a opção de navio escolhida pelo usuário
+                GameView.imprimirTabuleiro(jogador.getMapa())           ''exibe o tabuleiro atual do usuário
+                GameView.setarPosicaoNavio(linha, coluna, orientacao)   ''atribui os valores de linha, coluna e orientação escolhidos pelo usuário para as variáveis 
+            End If
 
-            GameView.imprimirTabuleiro(jogador.getMapa())           ''exibe o tabuleiro atual do usuário
-            GameView.setarPosicaoNavio(linha, coluna, orientacao)   ''atribui os valores de linha, coluna e orientação escolhidos pelo usuário para as variáveis 
+            Dim embarcacao = New Navio(navioEscolha)                    ''cria um navio escolhido pelo usuário ou pelo bot
+
+            If jogador.getNome = "Bot" Then
+                Console.WriteLine(navioEscolha)
+                Console.WriteLine(linha)
+                Console.WriteLine(coluna)
+                Console.WriteLine(orientacao)
+            End If
+
 
             If (MapaController.posicaoValida(embarcacao, jogador.getMapa(), linha, coluna, orientacao)) Then    ''caso os valores sejam válidos para o tabuleiro
                 For k = 0 To embarcacao.getQntdCasas - 1
