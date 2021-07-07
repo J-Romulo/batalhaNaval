@@ -41,7 +41,7 @@
         Return bot
     End Function
 
-    Public Function setarNaviosBot(bot As Jogador)
+    Public Function setarNaviosBot(bot As Jogador, quantidadeNavios As Integer)
 
     End Function
 End Module
