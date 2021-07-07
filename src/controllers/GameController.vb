@@ -1,41 +1,25 @@
 ﻿Public Module GameController
     Public Function run()
-        Dim playerResposta = GameView.menuInicial()
+        Dim playerResposta = GameView.menuInicial()                 ''retorna a opção escolhida pelo jogador (jogar ou sair)
 
-        If playerResposta = 2 Then
+        If playerResposta = 2 Then                                  ''Encerra a execução do programa
             Environment.Exit(2)
         End If
 
-        Dim jogador As Jogador = GameView.infoJogador()
+        Dim jogador As Jogador = GameView.infoJogador()             ''Cria um jogador com o nome passado pelo usuário
 
         Dim tabuleiroLargura, tabuleiroAltura, qntdNavios As Integer
-        GameView.infoTabuleiro(tabuleiroLargura, tabuleiroAltura, qntdNavios)
-        Dim mapa As Mapa = MapaController.criarMapa(tabuleiroLargura, tabuleiroAltura, qntdNavios)
+        GameView.infoTabuleiro(tabuleiroLargura, tabuleiroAltura, qntdNavios)   ''atribui o tamanho do tabuleiro e a quantidade de navios escolhidos pelo usuário às variáveis passadas como parametro
+        Dim mapa As Mapa = MapaController.criarMapa(tabuleiroLargura, tabuleiroAltura, qntdNavios) ''cria um tabuleiro com o tamanho e a quantidade de navios passadas pelo usuário
 
-        jogador.setTabuleiro(mapa)
+        jogador.setTabuleiro(mapa)                                  ''atribui o tabuleiro ao jogador
+        JogadorController.setarNavios(jogador)                      ''posiciona os navios no tabuleiro
 
-        Dim bot As Jogador = JogadorController.criarBot(jogador.getMapa())
+        Dim bot As Jogador = JogadorController.criarBot(jogador.getMapa())  ''cria um bot com um tabuleiro igual ao do jogador
+        JogadorController.setarNaviosBot(bot)                               ''posiciona os navios do bot
 
 
-        For j = 0 To mapa.getNaviosLength
-            Dim navioEscolha = GameView.escolhaNavios() - 1
-            Dim embarcacao = New Navio(navioEscolha)
 
-            For i = 0 To navioEscolha
-                GameView.imprimirTabuleiro(jogador.getMapa())
-                Dim linha, coluna As Integer
-                GameView.setarPosicaoNavio(linha, coluna)
-                embarcacao.setPosicao(linha, coluna, i)
-
-                MapaController.setarJogada(jogador.getMapa, linha, coluna, embarcacao.getTipo)
-                MapaController.setarJogada(bot.getMapa, linha, coluna, embarcacao.getTipo)
-            Next
-
-            MapaController.setarEmbarcacao(jogador.getMapa, embarcacao)
-            MapaController.setarEmbarcacao(bot.getMapa, embarcacao)
-
-            GameView.imprimirTabuleiro(jogador.getMapa())
-        Next
 
         Dim resultadoRodada
         While resultadoRodada <> 2

@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\models"
+    "\\src\\controllers"
   ],
-  "SelectedNode": "\\src\\models\\Jogador.vb",
+  "SelectedNode": "\\src\\Program.vb",
   "PreviewInSolutionExplorer": false
 }

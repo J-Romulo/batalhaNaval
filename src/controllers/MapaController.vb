@@ -94,4 +94,14 @@
             Return False
         End If
     End Function
+    Public Function posicaoValida(embarcacao As Navio, mapa As Mapa, linha As Integer, coluna As Integer, orientacao As Integer)
+        If orientacao = 1 Then
+            If coluna + embarcacao.getQntdCasas <= mapa.getLargura + 1 And linha < mapa.getAltura + 1 Then Return True
+        ElseIf orientacao = 2 Then
+            If linha + embarcacao.getQntdCasas <= mapa.getAltura + 1 And coluna < mapa.getLargura + 1 Then Return True
+        End If
+
+        Return False
+    End Function
+
 End Module

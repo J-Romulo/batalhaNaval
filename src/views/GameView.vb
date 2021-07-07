@@ -94,12 +94,17 @@ Public Module GameView
         Return Console.ReadLine()
     End Function
 
-    Public Function setarPosicaoNavio(ByRef linha As Integer, ByRef coluna As Integer)
+    Public Function setarPosicaoNavio(ByRef linha As Integer, ByRef coluna As Integer, ByRef orientacao As Integer)
         Console.WriteLine("Posição da embarcação:")
         Console.Write("Linha: ")
         linha = Console.ReadLine()
         Console.Write("Coluna: ")
         coluna = Console.ReadLine()
+        Console.Write("Orienteção: ")
+        Console.WriteLine()
+        Console.WriteLine("1 - Horizontal")
+        Console.WriteLine("2 - Vertical")
+        orientacao = Console.ReadLine()
     End Function
 
     Public Function setarCoordenadasAtaque(ByRef linha As Integer, ByRef coluna As Integer)
