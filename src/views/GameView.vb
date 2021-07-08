@@ -58,7 +58,7 @@ Public Module GameView
         Dim largura = tabuleiro.getLargura
 
         Console.WriteLine()
-        Console.WriteLine("Tabuleiro inimigo")
+
         For i = 0 To altura
             Console.Write("{0}- ", i)
             For j = 0 To largura
